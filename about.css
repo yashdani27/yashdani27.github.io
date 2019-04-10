@@ -3,6 +3,27 @@ img {
     height: 360px;
 }
 
-.wrap {
-    flex-wrap: wrap;
+/* .box-1 {
+    flex: 1;
+}
+
+.box-2 {
+    flex: 1
+} */
+
+.profile-box {
+    flex: 1;
+}
+
+.content-box {
+    flex: 3;
+}
+
+@media(min-width: 768px) {
+    /* .main {
+        display: flex;
+    } */
+    .container-box {
+        display: flex;
+    }
 }

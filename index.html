@@ -30,12 +30,101 @@
     </nav>
 
     <div class="container">
-      <div class="row">
-    
-      </div>
-
       <div class="content">
+        <p class="story">
+          <h5>Introduction to Attendance Manager</h5>
+          <br>
+          I started off this project on the Android Application Development Platform. I had been working on small Android Applications since a long time and wanted to try something new. I started off with a simple list interface where each row would toggle its state on a click. I tried to build a decent User Experience until I decided to let our HOD in on my secret project :D Prof. Prasad Joshi were totally aboard with the idea of an Attendance Manager for our department. Prof. Joshi, being very supportive of the idea, asked me to talk to Prof. Mayur Parulekar to kickstart the project ASAP. I discussed the basic functionality with Prof. Parulekar and started the project right away.
+          <br><br>
 
+          <h5>Enough with the history, lets begin with the technical details!!</h5>
+          <br>
+          As mentioned earlier, I started off the project on the Android Application Development Platform. Based on my conversations with Prof. Joshi and Prof. Parulekar, they wanted me to develop a standalone application i.e. no Client-Server Architecture and the attendance records would be stored on each individual teacher's phones (in the Internal Storage). 
+          <br><br>
+          Since it was a standalone model, I decided not to use a DatabaseEngine. Instead, I would store all the data on the users' phones as files in a custom folder that I'd create the first time the app is run. 
+          <br><br>
+          I decided to use the <a href="https://www.w3schools.com/whatis/whatis_json.asp">JSON</a> (JavaScript Object Notation) format for data storage in each of those files. The primary reason being the popularity and acceptance of JSON across the entire Software Dev Industry. 
+          <br><br>
+
+          <h5>Implementation Example</h5>
+
+          Suppose you want to create a new subject: DLIC
+          <br>
+          The following events take place when you add that subject.
+          <br>
+          <br>
+
+          Editions in the "subjects.json" file.
+          <br>
+          <pre>
+          {
+                subject_names:["dlic"],
+                "cvlsi": {
+                  "th": true, 
+                  "pr": false, 
+                  "batches": [0, 1, 2, 3], 
+                  "0": {"count": 5, "absent_count": 4},
+                  "1": {}...
+                }, 
+          }
+                </pre>
+
+          <br><br>
+
+          A new file "be_elex.json" is created which contains student-subject record.
+          <br>
+          <pre>
+            {
+                subject_names:["cvlsi"], 
+                "0": {
+                    "name": "Dani Yash Dharmendra", 
+                    "sap": "60001168001", 
+                    "batch":1, 
+                    "cvlsi": {
+                      "total": 3, 
+                      "record": "APAPP"
+                    }
+                  }, 
+                "1":{}...
+            }
+            </pre>
+          <br><br>
+
+          Another file "cvlsi.json" is created which records every lecture or practical that occurs.
+          <br>
+          <pre>
+            {
+                "th": {
+                  "date": 7, 
+                  "month": 1, 
+                  "year": 2019, 
+                  "count": 70
+                }, 
+                "0":{...}, 
+                "1":{...}
+            }
+          </pre>
+          <br><br>
+
+          <h5>Transition to Web</h5>
+
+          The Web Dev followed a similar data storage approach as described above except it was a Client Server Model now; and most importantly it was WEB DEV now!
+          <br>
+          Since it was WebDev now, I had to code everything from scratch, only the logic would be same.
+          <br>
+          During the development phase, my local machine, i.e. my PC would be my Server (obviously). When we started to test the functionality in college with professors, the Server was run on an Ubuntu Linux VM rented at <a href="https://www.digitalocean.com">DigitalOcean</a>.
+          <br>
+
+          For the development, I decided to use the MEAN Stack - <br>
+          <a href="https://docs.mongodb.com">MongoDB</a> - DatabaseEngine, <br>
+          <a href="https://docs.mongodb.com">ExpressJS</a> - Web Application Framework, <br>
+          <a href="https://docs.mongodb.com">Angular</a> - Web Application Framework (Frontend - Client-side programming), <br>
+          <a href="https://docs.mongodb.com">NodeJS</a> - JS run-time environment (Backend - Server-side programming) <br>
+          <br>
+          
+          Refer to the official documentation to get started.
+
+        </p>
       </div>
     </div>
 

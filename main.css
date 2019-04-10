@@ -2,7 +2,6 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header {
-    background-color: #006699;
-    color: #fff;
+.content {
+    margin-top: 60px;
 }
